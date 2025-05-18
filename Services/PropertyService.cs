@@ -1,11 +1,12 @@
 using MongoDB.Driver;
 using RealEstateApi.Models;
+using RealEstateApi.Interfaces;
 using Microsoft.Extensions.Options;
 using RealEstateApi.Dtos;
 
 namespace RealEstateApi.Services;
 
-public class PropertyService
+public class PropertyService : IPropertyService
 {
     private readonly IMongoCollection<Property> _properties;
 

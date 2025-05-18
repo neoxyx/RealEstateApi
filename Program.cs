@@ -1,6 +1,7 @@
 using Microsoft.OpenApi.Models;
 using Microsoft.OpenApi.Services;
 using RealEstateApi.Models;
+using RealEstateApi.Interfaces;
 using RealEstateApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.Configure<MongoDBSettings>(
 builder.Services.AddSingleton<PropertyService>();
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IPropertyService, PropertyService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {

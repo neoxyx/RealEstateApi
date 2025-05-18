@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RealEstateApi.Models;
+using RealEstateApi.Interfaces;
 using RealEstateApi.Services;
 using RealEstateApi.Dtos;
 
@@ -9,9 +10,9 @@ namespace RealEstateApi.Controllers;
 [Route("api/[controller]")]
 public class PropertyController : ControllerBase
 {
-    private readonly PropertyService _propertyService;
+    private readonly IPropertyService _propertyService;
 
-    public PropertyController(PropertyService propertyService)
+    public PropertyController(IPropertyService propertyService)
     {
         _propertyService = propertyService;
     }
