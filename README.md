@@ -38,7 +38,7 @@ cd RealEstateApi
 dotnet build
 dotnet run
 La API estará disponible en:
-📍 http://localhost:5200/api/property
+📍 http://localhost:5076/api/property
 
 Endpoint Principal
 GET /api/property
